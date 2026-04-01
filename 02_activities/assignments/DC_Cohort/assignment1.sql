@@ -45,7 +45,7 @@ Limit to 25 rows of output.
 
 SELECT *, (quantity * cost_to_customer_per_qty) AS price
 FROM customer_purchases
-WHERE customer_id BETWEEN 8 AND 10
+WHERE customer_id >= 8 AND customer_id <= 10
 LIMIT 25;
 
 --END QUERY
@@ -59,7 +59,7 @@ if the product_qty_type is “unit,” and otherwise displays the word “bulk.�
 --QUERY 4
 
 SELECT 
-  product_id,
+  product_id, 
   product_name,
   CASE 
     WHEN product_qty_type = 'unit' THEN 'unit'
@@ -93,7 +93,10 @@ vendor_id field they both have in common, and sorts the result by market_date, t
 Limit to 24 rows of output. */
 --QUERY 6
 
-SELECT *
+SELECT 
+  vendor.vendor_name,
+  vendor_booth_assignments.market_date,
+  vendor_booth_assignments.booth_number
 FROM vendor
 INNER JOIN vendor_booth_assignments
 ON vendor.vendor_id = vendor_booth_assignments.vendor_id
@@ -113,7 +116,7 @@ at the farmer’s market by counting the vendor booth assignments per vendor_id.
 
 SELECT 
   vendor_id,
-  COUNT(*) AS booth_rentals
+  COUNT(vendor_id) AS booth_rentals
 FROM vendor_booth_assignments
 GROUP BY vendor_id;
 
@@ -154,8 +157,25 @@ VALUES(col1,col2,col3,col4,col5)
 */
 --QUERY 9
 
+CREATE TABLE temp.new_vendor AS
+SELECT * FROM vendor;
 
-
+-- Insert the new vendor
+INSERT INTO temp.new_vendor (
+  vendor_id,
+  vendor_name,
+  vendor_type,
+  vendor_owner_first_name,
+  vendor_owner_last_name
+)
+VALUES (
+  10,
+  'Thomass Superfood Store',
+  'Fresh Focused',
+  'Thomas',
+  'Rosenthal'
+);
+ 
 
 --END QUERY
 
@@ -168,7 +188,12 @@ and year are!
 Limit to 25 rows of output. */
 --QUERY 10
 
-
+SELECT 
+  customer_id,
+  STRFTIME('%m', purchase_date) AS month,
+  STRFTIME('%Y', purchase_date) AS year
+FROM customer_purchases
+LIMIT 25;
 
 
 --END QUERY
@@ -182,7 +207,12 @@ but remember, STRFTIME returns a STRING for your WHERE statement...
 AND be sure you remove the LIMIT from the previous query before aggregating!! */
 --QUERY 11
 
-
+SELECT 
+  customer_id,
+  SUM(quantity * cost_to_customer_per_qty) AS total_spent
+FROM customer_purchases
+WHERE STRFTIME('%m', purchase_date) = '04' AND STRFTIME('%Y', purchase_date) = '2022'
+GROUP BY customer_id;
 
 
 --END QUERY
