@@ -87,7 +87,6 @@ I diagramed the following four tables:
 - vendor_inventory
 
  <img src="./images/01_farmers_market_logical_model_partial.png" width="500">
- <img src="./images/assignment-1.png"
 
 #### Prompt 1:
 Choose two tables and create a logical data model. There are lots of tools you can do this (including drawing this by hand), but I'd recommend [Draw.io](https://www.drawio.com/) or [LucidChart](https://www.lucidchart.com/pages/). 
@@ -106,8 +105,7 @@ Please do not pick the exact same tables that I have already diagrammed. For exa
 	- <img src="./images/01_farmers_market_conceptual_model.png" width="600">
 - The column names can be found in a few spots (DB Schema window in the bottom right, the Database Structure tab in the main window by expanding each table entry, at the top of the Browse Data tab in the main window)
 
-
-
+<img src="./images/assignment-1.png">
 ***
 
 ## Section 2:
