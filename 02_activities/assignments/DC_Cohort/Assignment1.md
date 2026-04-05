@@ -87,8 +87,7 @@ I diagramed the following four tables:
 - vendor_inventory
 
  <img src="./images/01_farmers_market_logical_model_partial.png" width="500">
-
-<img src="./images/assignment-1.png"
+ <img src="./images/assignment-1.png"
 
 #### Prompt 1:
 Choose two tables and create a logical data model. There are lots of tools you can do this (including drawing this by hand), but I'd recommend [Draw.io](https://www.drawio.com/) or [LucidChart](https://www.lucidchart.com/pages/). 
