@@ -88,6 +88,7 @@ I diagramed the following four tables:
 
  <img src="./images/01_farmers_market_logical_model_partial.png" width="500">
 
+<img src="./images/assignment-1.png"
 
 #### Prompt 1:
 Choose two tables and create a logical data model. There are lots of tools you can do this (including drawing this by hand), but I'd recommend [Draw.io](https://www.drawio.com/) or [LucidChart](https://www.lucidchart.com/pages/). 
@@ -105,6 +106,8 @@ Please do not pick the exact same tables that I have already diagrammed. For exa
 	- These are the tables that are connected
 	- <img src="./images/01_farmers_market_conceptual_model.png" width="600">
 - The column names can be found in a few spots (DB Schema window in the bottom right, the Database Structure tab in the main window by expanding each table entry, at the top of the Browse Data tab in the main window)
+
+
 
 ***
 
@@ -209,5 +212,9 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 
 
 ```
-Your thoughts...
+As a first-generation immigrant, I did not realize that staying with the same bank for a long time would affect how I am evaluated and what can be offered to me. I assumed that what mattered most was my current financial situation—my income, my ability to repay, and my overall responsibility. But my experience has shown me that this is not always the case. My experience with banks has felt inconsistent. I have a stable income, I own property, and I have never missed a mortgage payment. Still, every time I apply for a small increase to my line of credit, I get denied. At the same time, I am regularly offered increases to my credit card limit, often for large amounts. It feels like I am being encouraged toward the more expensive option, while being blocked from the one that would actually be more helpful.
+This became even more confusing when I compared my experience to my partner’s. My partner, who is Canadian-born and has had the same bank account since childhood, was able to get a line of credit approved without much difficulty. This is despite being currently unemployed and not qualifying for a mortgage. Seeing this side by side made it clear that we were not being evaluated in the same way. It seems that banking systems are not just looking at current financial responsibility. Instead, they place a lot of weight on long-term history within the system. In this case, “trust” is not only about what you can demonstrate now, but about how long you have been part of the system.
+This experience highlights the value systems embedded in banking databases. These systems define trust based on long-term participation and historical data, rather than current financial responsibility. Additionally, they reflect a form of risk management that is meant to drive profit, where individuals may be steered toward higher-interest products like credit cards rather than lower-interest options like lines of credit.
+This raises questions about fairness. Two people with very different financial situations can receive very different outcomes, not because of what they can afford now, but because of how their histories are recorded. More broadly, this shows how banking systems can reinforce existing inequalities. They tend to benefit people who have had early and continuous access to financial institutions, while creating barriers for people, like immigrants, who enter the system later and have to build that history from the beginning. What appears to be a neutral, data-driven system is actually shaped by assumptions about what a “trustworthy” person should look like.
+
 ```
