@@ -47,8 +47,13 @@ There are several tools online you can use, I'd recommend [Draw.io](https://www.
 
 **HINT:** You do not need to create any data for this prompt. This is a conceptual model only. 
 
+<img src="./images/assignment-two-section-1-prompt-1.png">
+
+
 #### Prompt 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
+
+<img src="./images/assignment-two-section-1-prompt-2.png">
 
 #### Prompt 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2? 
@@ -56,7 +61,11 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+
+Type 1: One way to design the CUSTOMER_ADDRESS table is to only store the customer’s current address. For example, the table could include a column like customer_address. If the customer changes their address, the existing row would just be updated with the new information, and the old address would be lost. 
+
+Type 2: Another way to design the table is to keep a history of address changes. In this case, a new row would be added each time a customer updates their address, instead of replacing the old one. The table could include an additional column like address_currently_active which allows a 1/0 response option. 
+
 ```
 
 ***
@@ -191,5 +200,7 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+One key ethical issue highlighted in this article is the reliance on cheap human labor to build machine learning systems. Large datasets such as ImageNet were created using platforms like Amazon Mechanical Turk, where workers are paid very little to perform repetitive tasks such as labeling images. While this labor is essential to the functioning of AI systems, it is not fairly compensated. This raises concerns about exploitation, particularly because these workers have limited power and little job security, while technology companies and researchers benefit significantly from their contributions.
+A second ethical concern relates to how knowledge systems like WordNet were used as the foundation for image classification. WordNet was developed over 50 years prior to its use for ImageNet, meaning that many of its categories and definitions reflect outdated language and cultural assumptions. When these classifications are used to label images in modern AI systems, they risk reinforcing perspectives that are no longer appropriate or socially acceptable. This lack of cultural sensitivity can lead to harmful or offensive categorizations.
+Finally, a third concern is the long-term maintenance and accountability of these datasets. Although efforts have been made to address problematic labels within the “person” category of ImageNet, it remains unclear how these systems will be kept up to date as social norms and language continue to evolve. If human intervention is required to continuously revise and correct these datasets, this introduces ongoing logistical challenges. However, if these systems are not regularly updated, it risks embedding outdated identifications into everyday technologies. 
 ```
